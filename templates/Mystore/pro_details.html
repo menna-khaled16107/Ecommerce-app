@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h2>{{ details.name }}</h2>
+
+    <p>Price: ${{ details.price }}</p>
+    <p>Description: {{ details.content }}</p>
+    
+    <p>Status: 
+        {% if details.active %}
+            Active
+        {% else %}
+            Inactive
+        {% endif %}
+    </p>
+
+    <p>Created At: {{ details.created_at|date:" d M Y " }}</p>
+    <a href="{% url 'update_product' details.id %}" class="btn btn-warning"> Edit </a>
+    <br>
+    <a href="{% url 'deleted' details.id %}" class="btn btn-warning"> Delete </a>
+</div>
+{% endblock content %}

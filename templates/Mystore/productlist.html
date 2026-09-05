@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h2>All Products</h2>
+
+    <div class="products-grid">
+        {% for x in products %}
+            <div class="product-card">
+                {% if x.image_pro %}
+                    <img src="{{ x.image_pro }}" alt="{{ x.name }}">
+                {% else %}
+                    <img src="https://via.placeholder.com/200" alt="No image">
+                {% endif %}
+                <h3>{{ x.name }}</h3>
+                <p class="category-name">Category: {{ x.category.name }}</p>
+                <p class="price">${{ x.price }}</p>
+                <a href="{% url 'Details' x.id %}" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+        {% empty %}
+            <p>No products available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

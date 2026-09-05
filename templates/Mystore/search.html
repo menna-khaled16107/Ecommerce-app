@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h2>Search Results for: "{{ cases }}"</h2>
+
+    <div class="products-grid">
+        {% for x in products %}
+            <div class="product-card">
+                {% if x.image_pro %}
+                    <img src="{{ x.image_pro }}" alt="{{ x.name }}">
+                {% else %}
+                    <img src="https://via.placeholder.com/200" alt="No image">
+                {% endif %}
+                <h3>{{ x.name }}</h3>
+                <p class="category-name">Category: {{ x.category.name }}</p>
+                <p class="price">${{ x.price }}</p>
+            </div>
+        {% empty %}
+            <p>No products matched your search.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

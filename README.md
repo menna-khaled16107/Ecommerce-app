@@ -1,39 +1,54 @@
 # TechZone
 
-## overview
-TechZone is e_commerce_website that display desktops,laptops,accessories,....
+## Overview
+TechZone is an e-commerce website that displays desktops, laptops, and accessories.
 
-## TechnologiesUsed 
-$python
-$Django
-$Html :by ai
-$css  : by ai
-but all back by me (one day inshalla , i will return to it and implement all project)
+## Technologies Used
+- Python
+- Django
+- HTML & CSS (frontend built with AI assistance)
+
+> The backend (models, views, URLs, CRUD logic) was written by me. The frontend was AI-assisted, and I plan to revisit and implement it myself, in sha Allah.
 
 ## Features
-* View all available products and categories on the home page.
-* Filter products by specific categories.
-*  search for products.
-* Product details view.
-* Full CRUD operations for managing products (Add, Edit, Delete,Update).
+- View all available products and categories on the home page
+- Filter products by category
+- Search for products
+- Product details view
+- Full CRUD operations for managing products (Add, Edit, Update, Delete)
 
-## setup & installations
-* git clone (your github repository url)
-* cd E_commerce_website
-* ### activate virtual enviroment 
-  *for windows:
-    (python -m venv env env\Scripts\activate)
+## Setup & Installation
 
-  *for mac/linux:
-    (python3 -m venv env source env/bin/activate)   
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/menna-khaled16107/Ecommerce-app.git
+   cd Ecommerce-app
+   ```
 
-### install project dependencies:
-  (uv pip install -r requirements.txt)    
+2. Create and activate a virtual environment:
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
 
-### apply database migrations;
- (python manage.py migrate)
+   # macOS / Linux
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-### for running code:
-(python manage.py runserver)
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+4. Apply database migrations:
+   ```bash
+   python manage.py migrate
+   ```
 
+5. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+Then open http://127.0.0.1:8000/ in your browser.
